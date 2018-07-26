@@ -18,6 +18,7 @@ class DeleteAction extends Action
         parent::__construct($name, 'object');
 
         $this->setIcon('fa-times');
+        $this->setClass("btn-danger");
         $this->setLabel('action.object.delete.label');
         $this->setConfirm('action.object.delete.confirm');
         $this->setCsrfProtected(true);
