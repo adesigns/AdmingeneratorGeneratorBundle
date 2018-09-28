@@ -34,9 +34,7 @@ class RoutingLoader extends FileLoader
         'update' => array(
                     'pattern'      => '/{pk}/update',
                     'defaults'     => array(),
-                    'requirements' => array(
-                        '_method' => 'POST'
-                    ),
+                    'methods' => array('POST'),
                     'controller'   => 'edit',
                 ),
         'show' => array(
@@ -53,9 +51,7 @@ class RoutingLoader extends FileLoader
         'batch' => array(
                     'pattern'      => '/batch',
                     'defaults'     => array(),
-                    'requirements' => array(
-                        '_method' => 'POST'
-                    ),
+                    'methods' => array('POST'),
                     'controller'   => 'actions',
                 ),
         'new' => array(
@@ -67,9 +63,7 @@ class RoutingLoader extends FileLoader
         'create' => array(
                     'pattern'      => '/create',
                     'defaults'     => array(),
-                    'requirements' => array(
-                        '_method' => 'POST'
-                    ),
+                    'methods' => array('POST'),
                     'controller'   => 'new',
                 ),
         'filters' => array(
@@ -139,7 +133,7 @@ class RoutingLoader extends FileLoader
                             . ucfirst($controller) . ':' . $action;
                 }
 
-                $route = new Route($datas['pattern'], $datas['defaults'], $datas['requirements']);
+                $route = new Route($datas['pattern'], $datas['defaults'], array(), array(), '', array(), !empty($datas['methods']) ? $datas['methods'] : array());
                 $collection->add($route_name, $route);
                 $collection->addResource(new FileResource($controllerName));
             }
