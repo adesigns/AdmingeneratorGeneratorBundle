@@ -24,7 +24,7 @@
 		"symfony/symfony" : ">= 2.2.0",
 		"doctrine/common" : "~2.2",
 		"sensio/generator-bundle" : ">= 2.3.3",
-		"cedriclombardot/twig-generator" : "1.0.*",
+		"cedriclombardot/twig-generator" : "dev-master",
 		"knplabs/knp-menu-bundle" : ">1.0,<3.0",
 		"white-october/pagerfanta-bundle" : "1.0.*@dev",
 		"twig/twig" : ">= 1.9.0",
@@ -40,6 +40,12 @@
 		"doctrine/orm" : ">=2.2.3,<2.5-dev",
 		"doctrine/dbal" : ">=2.2.3,<2.5-dev"
 	},
+	"repositories": [
+		{
+			"url": "https://github.com/adesigns/TwigGenerator.git",
+			"type": "git"
+		}
+	],
 	"suggest" : {
 		"avocode/form-extensions-bundle" : "Symfony2 form extensions for Admingenerator",
 		"liuggio/excelbundle" : "(version >= 2.0) Allows the usage of the Excel export.",
