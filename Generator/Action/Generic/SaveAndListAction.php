@@ -17,7 +17,7 @@ class SaveAndListAction extends Action
 
         $this->setSubmit(true);
         $this->setClass('btn-info');
-        $this->setIcon('fa-check');
+        $this->setIcon('icon-check');
         $this->setLabel('action.generic.save-and-list');
     }
 }

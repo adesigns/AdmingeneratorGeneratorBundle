@@ -17,7 +17,7 @@ class SaveAndAddAction extends Action
 
         $this->setSubmit(true);
         $this->setClass('btn-primary');
-        $this->setIcon('fa-check');
+        $this->setIcon('icon-check');
         $this->setLabel('action.generic.save-and-add');
     }
 }
